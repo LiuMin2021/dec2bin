@@ -3,6 +3,8 @@ import sys
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QToolTip, QVBoxLayout, QHBoxLayout, QLabel, QLCDNumber, QDialog, QLineEdit, QGridLayout, QFormLayout,QTextEdit,QRadioButton, QCheckBox, QSlider
 from PyQt5.QtCore import Qt, QSize, QTimer
+from gpiozero import LED
+from signal import pause
 
 # Klasse für das Hauptfenster
 class MyWindow(QMainWindow):
@@ -63,6 +65,7 @@ class MyWindow(QMainWindow):
         
     def dec2bin(self):
         self.label.setText(str(value))    
+        
    
 
 app = QtWidgets.QApplication([])
